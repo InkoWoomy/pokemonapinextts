@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { fetchEvolutionData, fetchPokemonData, fetchSpeciesData } from '@/lib/service';
-import { EvolutionData, PokemonData, SpeciesData } from '@/utils/pokeInterfaces';
+import {PokemonData, SpeciesData } from '@/utils/pokeInterfaces';
 
 export default function PkmnDetails ({ userInput } : { userInput: string }) {
 
@@ -18,7 +18,7 @@ export default function PkmnDetails ({ userInput } : { userInput: string }) {
         const dataFetching = async () => {
             const fetchedPkmnData = await fetchPokemonData(userInput);
             const fetchedSpeciesData = await fetchSpeciesData(fetchedPkmnData.species.url);
-            const fetchedEvoData = await fetchEvolutionData(fetchedSpeciesData.evolution_chain.url);
+            // const fetchedEvoData = await fetchEvolutionData(fetchedSpeciesData.evolution_chain.url);
             
             
             
