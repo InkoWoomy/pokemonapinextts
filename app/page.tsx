@@ -35,12 +35,12 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:col-span-3 sm:col-start-6">
                 <div className="justify-self-center">
                     <button type="button" id="favBtn" className="bg-blue-300 border-blue-400 hover:bg-blue-500 hover:border-blue-600 border-4 focus:ring-blue-300 rounded-3xl">
-                        <Image src="/img/StarOff.png" alt="Favorites Button" className="m-3 object-fill"/>
+                        <Image src="/img/StarOff.png" width={30} height={30} alt="Favorites Button" className="m-3 object-fill"/>
                     </button>                    
                 </div>
                 <div className="sm:justify-self-center lg:justify-self-start">
                     <button type="button" id="shuffleBtn" className="bg-blue-300 border-blue-400 hover:bg-blue-500 hover:border-blue-600 border-4 focus:ring-blue-300 rounded-3xl">
-                        <Image src="/img/Shuffle.png" alt="Shuffle" className="m-3 object-fill"/>
+                        <Image src="/img/Shuffle.png" width={30} height={30} alt="Shuffle" className="m-3 object-fill"/>
                     </button>                    
                 </div>
             </div>
