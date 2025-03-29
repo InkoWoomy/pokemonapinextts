@@ -5,16 +5,15 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
-  const [searchTerm, setSearchTerm] = useState<any>(Math.ceil(Math.random() * 649));
-  const [userInput] = useState<any>();
+  const [searchTerm, setSearchTerm] = useState<string>("rhydon");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value != "" ? event.target.value : "NOTFOUND");
+    setSearchTerm(event.target.value != "" ? event.target.value : "");
   };
 
   const handleSearchClick = () => {
     if (searchTerm.trim() !== "") {
-      setSearchTerm(userInput); // Update search term (Re-renders components)
+      setSearchTerm(searchTerm);
     }
   };
   return (
@@ -24,7 +23,7 @@ export default function Home() {
           <h1 className="col-start-1 lg:col-span-2 text-white text-9xl">- Unova National Pokedex</h1>
             
             <div className="lg:col-start-3 sm:col-start-2 col-span-2">
-                <input type="text" id="searchText" placeholder="Search" className="px-5 w-full text-gray-900 border-4 border-gray-300 rounded-3xl bg-gray-50 text-base focus:ring-blue-300 focus:border-blue-300" value={userInput}
+                <input type="text" id="searchText" placeholder="Search" className="px-5 w-full text-gray-900 border-4 border-gray-300 rounded-3xl bg-gray-50 text-base focus:ring-blue-300 focus:border-blue-300" value={searchTerm}
               onChange={handleInputChange}/>
                 <div className="grid grid-cols-3" id="favList"></div>
             </div>

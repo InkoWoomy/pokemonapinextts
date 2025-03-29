@@ -84,27 +84,27 @@ export default function PkmnDetails ({ userInput } : { userInput: string }) {
 
 
 
-            <section id="pkmnDataEvolution" style={{ display: "block" }}>
+            {/* <section id="pkmnDataEvolution" style={{ display: "none" }}>
                 <div id="evoList" className="grid my-4">
                     <div id="basicPkmn" className="grid-cols-1">
                         {evolutionData?.chain.species.name}
                     </div>
                     <div id="stage1Pkmn" className="grid-cols-2 overflow-y-scroll">
-                        {/* {evolutionData?.chain.evolves_to.map((pkmn: any, index: any) => {
+                        {evolutionData?.chain.evolves_to.map((pkmn: any, index: any) => {
                             <h1 key={index}>{pkmn.species.name}</h1>
-                        })} */}
+                        })}
                     </div>
                     <div id="stage2Pkmn" className="grid-cols-3 overflow-y-scroll">
                         
                     </div>
                 </div>
             </section>
+ */}
 
 
 
 
-
-            <section id="pkmnDataGame" style={{ display: "block" }}>
+            {/* <section id="pkmnDataGame" style={{ display: "none" }}>
                 <div className="grid grid-cols-2 h-auto">
                     <div className="col-span-2 my-2">
                         <h1 className="px-2 bg-slate-600 rounded-t-2xl text-white"></h1>
@@ -127,7 +127,7 @@ export default function PkmnDetails ({ userInput } : { userInput: string }) {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
         </div>
   )
