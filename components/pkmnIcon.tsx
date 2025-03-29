@@ -43,7 +43,7 @@ export default function PkmnIcon ({ userInput } : { userInput: string }) {
                 
             </div>
             <div className="grid grid-cols-2 text-center">
-                {pkmnData?.types.map((type: any, index: any) => (
+                {pkmnData?.types.map((type, index: number) => (
                     <h1 key={index} className={`px-2 text-md type-${type.type.name} border-4 border-gray-400 rounded-xl capitalize`}>
                         {type.type.name}
                     </h1>

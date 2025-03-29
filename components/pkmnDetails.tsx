@@ -2,17 +2,17 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { fetchEvolutionData, fetchPokemonData, fetchSpeciesData } from '@/lib/service';
-import { PokemonData, SpeciesData } from '@/utils/pokeInterfaces';
+import { EvolutionData, PokemonData, SpeciesData } from '@/utils/pokeInterfaces';
 
 export default function PkmnDetails ({ userInput } : { userInput: string }) {
 
     const [pkmnData, setPkmnData] = useState<PokemonData>();
-    const [imgInGame, setImgInGame] = useState<any | null>("/img/substitute.png");
+    const [imgInGame, setImgInGame] = useState<string>("/img/substitute.png");
     
     const [speciesData, setSpeciesData] = useState<SpeciesData>();
     const [dexEntry, setDexEntry] = useState<string>("");
     
-    const [evolutionData, setEvolutionData] = useState<any>();
+    const [evolutionData, setEvolutionData] = useState<EvolutionData>();
     
     useEffect(() => {
         const dataFetching = async () => {
