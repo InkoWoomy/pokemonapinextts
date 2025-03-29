@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { fetchEvolutionData, fetchPokemonData, fetchSpeciesData } from '@/lib/service';
+import {fetchPokemonData, fetchSpeciesData } from '@/lib/service';
 import {PokemonData, SpeciesData } from '@/utils/pokeInterfaces';
 
 export default function PkmnDetails ({ userInput } : { userInput: string }) {
