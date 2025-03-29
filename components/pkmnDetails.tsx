@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { fetchEvolutionData, fetchPokemonData, fetchSpeciesData } from '@/lib/service';
 import { PokemonData, SpeciesData } from '@/utils/pokeInterfaces';
-import { spec } from 'node:test/reporters';
 
 export default function PkmnDetails ({ userInput } : { userInput: string }) {
 
