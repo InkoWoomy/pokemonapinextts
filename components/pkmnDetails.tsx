@@ -12,7 +12,7 @@ export default function PkmnDetails ({ userInput } : { userInput: string }) {
     const [speciesData, setSpeciesData] = useState<SpeciesData>();
     const [dexEntry, setDexEntry] = useState<string>("");
     
-    const [evolutionData, setEvolutionData] = useState<EvolutionData>();
+    // const [evolutionData, setEvolutionData] = useState<EvolutionData>();
     
     useEffect(() => {
         const dataFetching = async () => {
@@ -25,7 +25,7 @@ export default function PkmnDetails ({ userInput } : { userInput: string }) {
             setPkmnData(fetchedPkmnData);
             setImgInGame(`${fetchedPkmnData?.sprites.other.showdown.front_default}`);
             setSpeciesData(fetchedSpeciesData);
-            setEvolutionData(fetchedEvoData);
+            // setEvolutionData(fetchedEvoData);
             for (let i = 0; i < fetchedSpeciesData?.flavor_text_entries.length; i++)
             {
                 if (fetchedSpeciesData?.flavor_text_entries[i].language.name == "en" && fetchedSpeciesData?.flavor_text_entries[i].version.name == "x")
